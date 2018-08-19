@@ -1,0 +1,10 @@
+<h1 mat-dialog-title>Todo Editor</h1>
+<div mat-dialog-content>
+    <mat-form-field class="full-width">
+        <textarea matInput placeholder="What will we do?" [(ngModel)]="data.todo.title"></textarea>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions class="full-width">
+    <button mat-button (click)="onCancelClick()">Cancel</button>
+    <button mat-button [mat-dialog-close]="data.todo" cdkFocusInitial>Ok</button>
+</div>
